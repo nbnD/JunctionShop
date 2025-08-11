@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.sql.Date
+import java.util.Date
 
 
 @Entity("shopping_list")
@@ -23,7 +23,7 @@ data class Item(
     val id: Int = 0,
     val itemName: String,
     val qty: String,
-    val listIdFk: Int,
+    val listId: Int,
     val storeIdFk: Int,
     val date: Date,
     val isChecked: Boolean

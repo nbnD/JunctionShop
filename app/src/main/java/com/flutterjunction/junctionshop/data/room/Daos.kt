@@ -63,7 +63,7 @@ interface ListDao {
     @Query(
         """
         SELECT * FROM ITEMS AS I INNER JOIN shopping_list AS S
-        ON I.listIdFk =S.list_id INNER JOIN stores AS ST
+        ON I.listId =S.list_id INNER JOIN stores AS ST
          ON I.storeIdFk=ST.store_id
     """
     )
@@ -72,7 +72,7 @@ interface ListDao {
     @Query(
         """
         SELECT * FROM ITEMS AS I INNER JOIN shopping_list AS S
-        ON I.listIdFk =S.list_id INNER JOIN stores AS ST
+        ON I.listId =S.list_id INNER JOIN stores AS ST
          ON I.storeIdFk=ST.store_id WHERE S.list_id = :listId
     """
     )
@@ -80,7 +80,7 @@ interface ListDao {
     @Query(
         """
         SELECT * FROM ITEMS AS I INNER JOIN shopping_list AS S
-        ON I.listIdFk =S.list_id INNER JOIN stores AS ST
+        ON I.listId =S.list_id INNER JOIN stores AS ST
          ON I.storeIdFk=ST.store_id WHERE I.item_id = :itemId
     """
     )
