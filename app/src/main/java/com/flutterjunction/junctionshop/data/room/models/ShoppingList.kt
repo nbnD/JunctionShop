@@ -35,6 +35,7 @@ data class Store(
     @ColumnInfo("store_id")
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
+    val storeName:String,
     val listIdFk: Int,
 )
 data class ItemsWithStoreAndList(
